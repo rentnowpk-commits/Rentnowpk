@@ -52,6 +52,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/listings/:path*",
+        destination: "/cars/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

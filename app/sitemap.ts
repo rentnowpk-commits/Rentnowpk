@@ -15,6 +15,8 @@ import { LEGAL_LIST } from "@/lib/legal/data";
 
 const BASE = "https://www.rentnowpk.com";
 
+export const revalidate = 86400; // Cache for 24 hours
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [keywords, cities, routes, towns, models, categories, listings, businesses] =
     await Promise.all([
